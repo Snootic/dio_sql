@@ -36,11 +36,14 @@ INSERT INTO fornecedor (razao_social,CNPJ,celular) VALUES
 SELECT * FROM fornecedor;
 
 INSERT INTO estoque (id_produto,nome_produto, estoque, armazem, id_fornecedor) VALUES
-					(2, 'Casinha', 20, 'SP',3),
-					(4, 'Computador', 15,'RJ',2),
+					(1, 'Conjunto de panelas', 50, 'RJ', 3),
+                    (2, 'Casinha', 20, 'SP',3),
+                    (3, 'Tenis Nike',30,'RJ',1),
+					(4, 'Computador', 15,'SP',2),
 					(5, 'Microondas',20,'RJ',3),
-					(3, 'Tenis Nike',30,'RJ',1);
-
+					(6, 'Mesa', 15, 'RJ', 3),
+					(7, 'Furadeira', 20, 'SP', 3);
+                    
 SELECT * FROM estoque;
 
 INSERT INTO vendedor (razao_social,nome_fantasia,CNPJ,celular) VALUES
@@ -50,11 +53,11 @@ INSERT INTO vendedor (razao_social,nome_fantasia,CNPJ,celular) VALUES
 
 SELECT * FROM vendedor;
 
-INSERT INTO pedidos(status_pedido, valor, frete, id_cliente, id_produto, id_vendedor )
-			VALUES ('Processando', 120, 15, 4, 2, 3),
-				   ('Em Andamento', 2000, 0, 1, 4, 1),
-                   ('Enviado', 230, 0, 3, 5, 2),
-                   ('Entregue', 250, 20, 2, 3, 2);
+INSERT INTO pedidos(status_pedido,pagamento, valor, frete, id_cliente, id_produto, id_vendedor )
+			VALUES ('Processando','Cartão de Crédito', 120, 15, 4, 2, 3),
+				   ('Em Andamento','PIX', 2000, 0, 1, 4, 1),
+                   ('Enviado','Boleto', 230, 0, 3, 5, 2),
+                   ('Entregue','Cartão de Débito', 250, 20, 2, 3, 2);
 
 SELECT * FROM pedidos;
             

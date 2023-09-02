@@ -82,6 +82,7 @@ CREATE TABLE cliente(
 CREATE TABLE pedidos(
 	id_pedido INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     status_pedido ENUM('Em andamento', 'Processando', 'Enviado', 'Entregue'),
+    pagamento VARCHAR(20) NOT NULL,
     valor FLOAT NOT NULL,
     FRETE FLOAT NOT NULL default 0,
     id_cliente INT NOT NULL,

@@ -25,3 +25,11 @@ SELECT c.id_cliente, primeiro_nome, count(*) AS num_pedidos FROM cliente c
 		INNER JOIN pedidos p ON c.id_cliente = p.id_cliente
         GROUP BY id_cliente;
         
+-- Ordenar produto por preço
+SELECT * FROM produto
+order by produto.valor asc;
+
+-- Pedidos que o valor é maior ou igual a 250
+SELECT * FROM pedidos
+Having valor >= 250;
+
